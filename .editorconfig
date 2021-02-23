@@ -1,0 +1,60 @@
+# エディタ設定テンプレート
+# -------------------------------------------------------
+root = true
+
+# 全体構成
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+max_line_length = 120
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Python関係の設定
+# ----------------------------------------
+
+# Python: PEP8 遵守の設定
+[*.py]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+end_of_line = lf
+charset = utf-8
+max_line_length = 79
+
+# Ruby関係のeditorconfig
+# ----------------------------------------
+
+[*.gemspec]
+indent_size = 2
+
+[*.rb]
+indent_size = 2
+
+[enc/*]
+indent_size = 2
+
+[reg*.[ch]]
+indent_size = 2
+
+# その他、ファイル設定
+# ----------------------------------------
+
+# Makefileの設定
+[{*[Mm]akefile*,*.mak,*.mk,depend}]
+indent_style = tab
+indent_size = 4
+
+# Markdownに対する設定
+[*.md]
+indent_size = 4
+max_line_length = 0
+trim_trailing_whitespace = false
+
+[*.yml]
+indent_size = 2
+
+[*.bat]
+end_of_line = crlf
