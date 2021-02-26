@@ -1,6 +1,7 @@
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../../modules/store";
 import { clear, decrement, increment } from "../../modules/counter/slice";
+import { Button } from "react-bootstrap";
 
 export default () => {
   const count = useAppSelector((state) => state.counterReduer.value);
@@ -8,9 +9,15 @@ export default () => {
   return (
     <div>
       <p>{count}</p>
-      <button onClick={() => dispatch(increment())}>インクリメント</button>
-      <button onClick={() => dispatch(decrement())}>デクリメント</button>
-      <button onClick={() => dispatch(clear())}>クリア</button>
+      <Button variant="secondary" onClick={() => dispatch(increment())}>
+        インクリメント
+      </Button>{" "}
+      <Button variant="secondary" onClick={() => dispatch(decrement())}>
+        デクリメント
+      </Button>{" "}
+      <Button variant="secondary" onClick={() => dispatch(clear())}>
+        クリア
+      </Button>{" "}
     </div>
   );
 };
