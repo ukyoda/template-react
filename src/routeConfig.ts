@@ -7,6 +7,7 @@ export interface RouteData {
   path: string;
   component: React.ComponentType;
   exact?: true | false;
+  menu: boolean;
 }
 
 const routeConfig: RouteData[] = [
@@ -15,18 +16,21 @@ const routeConfig: RouteData[] = [
     path: "/",
     component: Counter,
     exact: true,
+    menu: true,
   },
   {
     name: "カウンタ",
     path: "/counter",
     component: Counter,
     exact: true,
+    menu: true,
   },
   {
     name: "サンプルページ",
     path: "/example",
     component: Example,
     exact: true,
+    menu: true,
   },
 ];
 export default routeConfig;
