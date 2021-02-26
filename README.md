@@ -9,7 +9,8 @@ Reactでアプリケーションを作るときのテンプレートリポジト
 * Typescript + Reactのテンプレート
 * Reactを使うPGを作成するときに使う
 * テストは`Jest`、`react-testing-library`を使う
-* Redux、ReduxToolkitが入っている
+* `Redux`、`Redux Toolkit`が入っている
+* UIは`react-bootstrap`を使う
 
 ## ディレクトリ構成
 
