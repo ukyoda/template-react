@@ -5,10 +5,6 @@ import { sleepDecrement, sleepIncrement } from "../../modules/asyncDemo/slice";
 import { Button, Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 
-const ColAlignCenter = styled(Col)`
-  text-align: center;
-`;
-
 export default () => {
   const [count1, count2, loading] = useAppSelector((state) => {
     return [state.counterReduer.value, state.asyncCounterReducer.value, state.asyncCounterReducer.loading];
@@ -16,7 +12,7 @@ export default () => {
   const dispatch = useAppDispatch();
   return (
     <Row>
-      <ColAlignCenter>
+      <Columns md="6" sm="12">
         <h2>普通のカウンタ</h2>
         <p>{count1}</p>
         <Button variant="secondary" onClick={() => dispatch(increment())}>
@@ -28,8 +24,8 @@ export default () => {
         <Button variant="secondary" onClick={() => dispatch(clear())}>
           クリア
         </Button>{" "}
-      </ColAlignCenter>
-      <ColAlignCenter>
+      </Columns>
+      <Columns md="6" sm="12">
         <h2>1秒後に更新されるカウンタ</h2>
         <p>{count2}</p>
         <div></div>
@@ -40,7 +36,12 @@ export default () => {
           1秒後にデクリメント
         </Button>{" "}
         <span>{loading}</span>
-      </ColAlignCenter>
+      </Columns>
     </Row>
   );
 };
+
+const Columns = styled(Col)`
+  text-align: center;
+  margin-top: 20px;
+`;
